@@ -22,6 +22,7 @@ $first->add_email('work','jdoe@mcdonalds.com');
 $first->add_grade(65);
 $first->add_grade(75);
 $first->add_grade(55);
+$first->add_status('status', 'Freshman');
 $students['j123'] = $first;
 
 $second = new Student();
@@ -33,6 +34,7 @@ $second->add_email('work2','albert@physics.mit.edu');
 $second->add_grade(95);
 $second->add_grade(80);
 $second->add_grade(50);
+$second->add_status('status', 'Senior');
 $students['a456'] = $second;
 
 $third = new Student();
@@ -44,7 +46,18 @@ $third->add_email('work2','shaocong@physics.mit.edu');
 $third->add_grade(95);
 $third->add_grade(80);
 $third->add_grade(50);
+$third->add_status('status', 'Junior');
 $students['v456'] = $third;
+
+$fourth = new Student();
+$fourth->surname = "Duocong";
+$fourth->first_name = "Li";
+$fourth->add_email('home','Duocong@braniacs.com');
+$fourth->add_grade(95);
+$fourth->add_grade(80);
+$fourth->add_grade(50);
+$fourth->add_status('status', 'Senior');
+$students['c456'] = $fourth;
 
 ksort($students); // one of the many sort functions
 foreach($students as $student)
